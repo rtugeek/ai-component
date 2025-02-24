@@ -1,0 +1,12 @@
+{
+  "fileMap": [
+    {
+      "src": "./storybook-static",
+      "dest": "/www/wwwroot/widgetjs.cn/vue3",
+      "order": 0
+    }
+  ],
+  "ftpConfig": {
+    "host": ["mine"]
+  }
+}
