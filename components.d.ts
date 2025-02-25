@@ -7,8 +7,20 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-
-  }
-  export interface ComponentCustomProperties {
+    AiConfigForm: typeof import('./src/components/AiConfigForm.vue')['default']
+    BaseIcon: typeof import('./src/components/icon/BaseIcon.vue')['default']
+    Card: typeof import('./src/components/Card.vue')['default']
+    DeepSeek: typeof import('./src/components/icon/DeepSeek.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElText: typeof import('element-plus/es')['ElText']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    Gemini: typeof import('./src/components/icon/Gemini.vue')['default']
+    OpenAI: typeof import('./src/components/icon/OpenAI.vue')['default']
+    Qwen: typeof import('./src/components/icon/Qwen.vue')['default']
+    Spark: typeof import('./src/components/icon/Spark.vue')['default']
+    TencentCloud: typeof import('./src/components/icon/TencentCloud.vue')['default']
   }
 }

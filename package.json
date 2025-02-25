@@ -1,14 +1,14 @@
 {
-  "name": "@widget-js/vue3",
+  "name": "@widget-js/ai-component",
   "type": "module",
-  "version": "24.1.1-beta.48",
+  "version": "0.0.4",
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
-  "main": "./dist/vue3.umd.js",
-  "module": "./dist/vue3.es.js",
-  "style": "./dist/style.css",
+  "main": "./dist/ai-component.umd.js",
+  "module": "./dist/ai-component.es.js",
+  "style": "./dist/ai-component.css",
   "web-types": "./dist/web-types.json",
   "types": "dist/index.d.ts",
   "files": [
@@ -19,7 +19,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:publish": "npm run build && npm run pnpm:publish",
-    "build:core": "pnpm --prefix ../core run build",
     "pnpm:publish": "pnpm publish --no-git-checks --registry=https://registry.npmjs.org/",
     "release:storybook": "widget release -t ftp",
     "lint": "eslint --cache .",
@@ -29,7 +28,13 @@
     "@icon-park/vue-next": "^1.4.2",
     "@vueuse/core": "^12.7.0",
     "@vueuse/shared": "^12.7.0",
+    "@widget-js/core": "24.1.1-beta.48",
     "consola": "^3.2.3",
+    "dexie": "^4.0.11",
+    "element-plus": "^2.9.5",
+    "marked": "^15.0.7",
+    "openai": "^4.85.4",
+    "pinia": "^3.0.1",
     "vue-demi": "^0.14.10"
   },
   "devDependencies": {
@@ -56,8 +61,8 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "unocss": "^66.0.0",
-    "unplugin-auto-import": "^0.12.0",
-    "unplugin-vue-components": "^0.22.11",
+    "unplugin-auto-import": "^0.12.2",
+    "unplugin-vue-components": "^0.22.12",
     "vite": "6.0.9",
     "vite-plugin-dts": "^3.9.1",
     "vite-plugin-md": "^0.20.4",

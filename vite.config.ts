@@ -4,12 +4,21 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   plugins: [
     dts(),
     vue(),
     UnoCSS(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
     viteStaticCopy({
       targets: [
         {
@@ -27,7 +36,7 @@ export default defineConfig({
     modules: { hashPrefix: '' },
     preprocessorOptions: {
       scss: {
-        additionalData: `@use './src/style/style.css';`,
+        additionalData: `@use './src/assets/main.css';`,
       },
     },
   },
@@ -40,10 +49,8 @@ export default defineConfig({
     outDir: 'dist',
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
-      // TODO rename to your project
-      name: 'todo',
-      // TODO rename to your project
-      fileName: format => `todo.${format}.js`,
+      name: 'ai-component',
+      fileName: format => `ai-component.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

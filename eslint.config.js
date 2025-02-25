@@ -16,5 +16,6 @@ export default antfu({
   rules: {
     'curly': ['error', 'multi-line'],
     'ts/no-use-before-define': 'off',
+    'ts/explicit-function-return-type': 'off',
   },
 })
